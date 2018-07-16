@@ -1,0 +1,15 @@
+[package]
+name = "slog-test"
+version = "0.1.0"
+authors = ["Bert Proesmans <bproesmans@hotmail.com>"]
+
+[dependencies]
+futures-await = {git = "https://github.com/alexcrichton/futures-await", rev="cd38b74"}
+# The Tokio family is split into seperate crates which are explicitly imported!
+# The 'Tokio' crate itself contains useful abstractions.
+tokio = "0.1"
+slog = { version = "2", features = ["max_level_trace"] }
+slog-envlogger = "2"
+slog-term = "2"
+slog-async = "2"
+slog-json = "2"
